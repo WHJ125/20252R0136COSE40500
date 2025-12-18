@@ -1,0 +1,7 @@
+n = 30
+is_p = [True]*(n+1)
+is_p[0]=is_p[1]=False
+for i in range(2, int(n**0.5)+1):
+    if is_p[i]:
+        for j in range(i*i, n+1, i): is_p[j]=False
+print([i for i in range(n+1) if is_p[i]])
